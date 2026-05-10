@@ -2,6 +2,12 @@
 /build
 /coverage
 /website/node_modules
+/playground/node_modules
+/playground/dist
+/demo/node_modules
+/demo/dist
+/experiment/node_modules
+/experiment/dist
 /website/public
 /website/.cache
 /plugins
