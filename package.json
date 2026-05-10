@@ -1,26 +1,7 @@
 {
-  "name": "react-multi-date-picker",
+  "name": "@mohankumar27/react-multi-date-picker",
   "version": "4.5.3",
   "description": "A simple React datepicker component for working with gregorian, persian, arabic and indian calendars with the ability to select the date by single, multiple, range and multiple range pickers.",
-  "main": "./build/index.js",
-  "module": "./build/index.es.js",
-  "types": "index.d.ts",
-  "files": [
-    "build",
-    "plugins",
-    "components",
-    "index.d.ts"
-  ],
-  "scripts": {
-    "website": "cd website && npm start",
-    "playground": "cd playground && npm run dev",
-    "build": "rollup -c",
-    "test": "jest --roots test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shahabyazdi/react-multi-date-picker.git"
-  },
   "keywords": [
     "react",
     "multi",
@@ -52,12 +33,37 @@
     "datetime",
     "component"
   ],
-  "author": "Shahab Yazdi <sh.yazdi@gmail.com>",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shahabyazdi/react-multi-date-picker/issues"
+    "url": "https://github.com/mohan272/react-multi-date-picker/issues"
   },
-  "homepage": "https://shahabyazdi.github.io/react-multi-date-picker/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohan272/react-multi-date-picker.git"
+  },
+  "license": "MIT",
+  "author": "Mohankumar",
+  "type": "commonjs",
+  "main": "./build/index.js",
+  "types": "index.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "build",
+    "plugins",
+    "components",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "website": "cd website && npm start",
+    "playground": "cd playground && npm run dev",
+    "build": "rollup -c",
+    "test": "jest --roots test"
+  },
+  "dependencies": {
+    "react-date-object": "^2.1.8",
+    "react-element-popper": "^2.1.6"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
@@ -81,12 +87,9 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2"
   },
-  "dependencies": {
-    "react-date-object": "^2.1.8",
-    "react-element-popper": "^2.1.6"
-  },
   "peerDependencies": {
     "react": ">=18 <20",
     "react-dom": ">=18 <20"
-  }
+  },
+  "module": "./build/index.es.js"
 }
