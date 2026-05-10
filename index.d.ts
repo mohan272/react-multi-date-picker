@@ -1,4 +1,3 @@
-declare module "react-multi-date-picker" {
   import React, { HTMLAttributes } from "react";
   import DateObject, { type Calendar, Locale } from "react-date-object";
 
@@ -561,7 +560,7 @@ declare module "react-multi-date-picker" {
       DatePickerProps<Multiple, Range>
   ): React.ReactElement;
 
-  type SetDateProps = {
+  export type SetDateProps = {
     date?: DateObject;
     year?: number;
     month?: number;
@@ -579,7 +578,7 @@ declare module "react-multi-date-picker" {
     digits?: string[];
   };
 
-  function set<K extends keyof SetDateProps = keyof SetDateProps>(
+  export function set<K extends keyof SetDateProps = keyof SetDateProps>(
     key: K,
     value: SetDateProps[K]
   ): void;
@@ -592,9 +591,7 @@ declare module "react-multi-date-picker" {
     refreshPosition: () => void;
     isOpen: boolean;
   };
-}
-
-declare module "react-multi-date-picker/plugins/date_panel" {
+declare module "@mohankumar27/react-multi-date-picker/plugins/date_panel" {
   import React, { HTMLAttributes } from "react";
   import DateObject from "react-date-object";
 
@@ -621,7 +618,7 @@ declare module "react-multi-date-picker/plugins/date_panel" {
   export default function DatePanel(props: DatePanelProps): React.ReactElement;
 }
 
-declare module "react-multi-date-picker/plugins/date_picker_header" {
+declare module "@mohankumar27/react-multi-date-picker/plugins/date_picker_header" {
   import React, { HTMLAttributes } from "react";
   import type { Calendar, Locale } from "react-date-object";
 
@@ -640,9 +637,9 @@ declare module "react-multi-date-picker/plugins/date_picker_header" {
   ): React.ReactElement;
 }
 
-declare module "react-multi-date-picker/plugins/colors" {
+declare module "@mohankumar27/react-multi-date-picker/plugins/colors" {
   import { HTMLAttributes } from "react";
-  import type { Plugin } from "react-multi-date-picker";
+  import type { Plugin } from "@mohankumar27/react-multi-date-picker";
 
   interface ColorsProps
     extends Omit<HTMLAttributes<HTMLDivElement>, "children"> {
@@ -656,7 +653,7 @@ declare module "react-multi-date-picker/plugins/colors" {
   export default function colors(object?: ColorsProps): Plugin[];
 }
 
-declare module "react-multi-date-picker/plugins/settings" {
+declare module "@mohankumar27/react-multi-date-picker/plugins/settings" {
   import React, { HTMLAttributes } from "react";
 
   interface SettingsProps
@@ -716,7 +713,7 @@ declare module "react-multi-date-picker/plugins/settings" {
   export default function Settings(props: SettingsProps): React.ReactElement;
 }
 
-declare module "react-multi-date-picker/plugins/toolbar" {
+declare module "@mohankumar27/react-multi-date-picker/plugins/toolbar" {
   import React, { HTMLAttributes } from "react";
 
   interface ToolbarProps
@@ -731,14 +728,14 @@ declare module "react-multi-date-picker/plugins/toolbar" {
   export default function Toolbar(props: ToolbarProps): React.ReactElement;
 }
 
-declare module "react-multi-date-picker/plugins/highlight_weekends" {
+declare module "@mohankumar27/react-multi-date-picker/plugins/highlight_weekends" {
   export default function highlightWeekends(weekends?: number[]): {
     type: string;
     fn: Function;
   };
 }
 
-declare module "react-multi-date-picker/plugins/time_picker" {
+declare module "@mohankumar27/react-multi-date-picker/plugins/time_picker" {
   import React, { HTMLAttributes } from "react";
 
   interface TimePickerProps
@@ -765,7 +762,7 @@ declare module "react-multi-date-picker/plugins/time_picker" {
   ): React.ReactElement;
 }
 
-declare module "react-multi-date-picker/plugins/analog_time_picker" {
+declare module "@mohankumar27/react-multi-date-picker/plugins/analog_time_picker" {
   import React from "react";
 
   interface TimePickerProps {
@@ -790,7 +787,7 @@ declare module "react-multi-date-picker/plugins/analog_time_picker" {
   ): React.ReactElement;
 }
 
-declare module "react-multi-date-picker/plugins/range_picker_footer" {
+declare module "@mohankumar27/react-multi-date-picker/plugins/range_picker_footer" {
   import React from "react";
 
   interface FooterProps {
@@ -810,7 +807,7 @@ declare module "react-multi-date-picker/plugins/range_picker_footer" {
   export default function Footer(props: FooterProps): React.ReactElement;
 }
 
-declare module "react-multi-date-picker/components/button" {
+declare module "@mohankumar27/react-multi-date-picker/components/button" {
   import React, { HTMLAttributes } from "react";
 
   export default function Buttons(
@@ -818,7 +815,7 @@ declare module "react-multi-date-picker/components/button" {
   ): React.ReactElement;
 }
 
-declare module "react-multi-date-picker/components/input_icon" {
+declare module "@mohankumar27/react-multi-date-picker/components/input_icon" {
   import React, { HTMLAttributes } from "react";
 
   export default function InputIcon(
@@ -826,7 +823,7 @@ declare module "react-multi-date-picker/components/input_icon" {
   ): React.ReactElement;
 }
 
-declare module "react-multi-date-picker/components/icon" {
+declare module "@mohankumar27/react-multi-date-picker/components/icon" {
   import React, { SVGAttributes } from "react";
 
   export default function Icon(
