@@ -40,7 +40,7 @@ export default [
         exports: "named",
       },
     ],
-    ...getProps(),
+    ...getProps([esmCjsInteropWrapper()]),
   },
   {
     input: "src/index_browser.js",
@@ -60,7 +60,7 @@ export default [
   ...build("elements"),
 ];
 
-function getProps() {
+function getProps(plugins = []) {
   return {
     external,
     plugins: [
@@ -78,7 +78,31 @@ function getProps() {
       }),
       svgr(),
       url(),
+      ...plugins,
     ],
+  };
+}
+
+function esmCjsInteropWrapper() {
+  return {
+    name: "esm-cjs-interop-wrapper",
+    closeBundle() {
+      fs.writeFileSync(
+        "build/index.mjs",
+        [
+          'import cjs from "./index.js";',
+          "",
+          "const DatePicker = cjs.default || cjs;",
+          "",
+          "export const DateObject = cjs.DateObject;",
+          "export const Calendar = cjs.Calendar;",
+          "export const getAllDatesInRange = cjs.getAllDatesInRange;",
+          "export const toDateObject = cjs.toDateObject;",
+          "export default DatePicker;",
+          "",
+        ].join("\n")
+      );
+    },
   };
 }
 
