@@ -197,7 +197,7 @@ function DatePicker(
       document.removeEventListener("click", handleClickOutside, false);
       document.removeEventListener("scroll", handleScroll, true);
     };
-  }, [closeCalendar, outerRef, isVisible, hideOnScroll]);
+  }, [closeCalendar, isVisible, hideOnScroll]);
 
   useEffect(() => {
     let date = value,

@@ -34,6 +34,11 @@ export default [
         plugins: [terser()],
         exports: "named",
       },
+      {
+        file: "build/index.es.js",
+        format: "esm",
+        exports: "named",
+      },
     ],
     ...getProps(),
   },

@@ -3,11 +3,19 @@
   "version": "4.5.2",
   "description": "A simple React datepicker component for working with gregorian, persian, arabic and indian calendars with the ability to select the date by single, multiple, range and multiple range pickers.",
   "main": "./build/index.js",
+  "module": "./build/index.es.js",
   "types": "index.d.ts",
+  "files": [
+    "build",
+    "plugins",
+    "components",
+    "index.d.ts"
+  ],
   "scripts": {
     "website": "cd website && npm start",
+    "playground": "cd playground && npm run dev",
     "build": "rollup -c",
-    "test": "jest ./test"
+    "test": "jest --roots test"
   },
   "repository": {
     "type": "git",
@@ -62,7 +70,7 @@
     "@svgr/rollup": "^6.3.1",
     "@tabler/icons": "^1.95.0",
     "@testing-library/jest-dom": "^5.16.0",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^16.3.2",
     "jest": "^27.4.3",
     "postcss": "8.4.16",
     "postcss-css-variables": "^0.18.0",
@@ -78,7 +86,7 @@
     "react-element-popper": "^2.1.6"
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": ">=18 <20",
+    "react-dom": ">=18 <20"
   }
 }
